@@ -1,0 +1,163 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+  <head>
+    <title>Trivia Game</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      #afterClick {
+        background-color: rgb(183, 240, 172);
+        visibility: hidden;
+      }
+      #results {
+        background-color: rgb(183, 240, 172);
+        visibility: hidden;
+      }
+      #questions {
+        visibility: hidden;
+      }
+
+      body {
+        background-image: url("assets/images/b11.jpeg");
+      }
+
+      ul:hover {
+        border: 4px solid rgb(44, 216, 10);
+      }
+
+      li:hover {
+        border: 4px solid rgb(44, 216, 10);
+        background-color: rgb(204, 136, 243);
+      }
+
+      img {
+        height: 200px;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+
+    <!-- Script -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+    <div
+      class="jumbotron jumbotron-fluid text-center"
+      style="background-color: rgb(183, 240, 172);"
+    >
+      <div class="container">
+        <h1 class="display-4">90's Nickelodeon Trivia!</h1>
+        <p class="lead">Are you a 90's Nick Kid? Take this quiz to see!</p>
+        <button
+          type="button"
+          class="btn btn-primary btn"
+          id="startButton"
+          onclick="startTimer();"
+        >
+          Start Quiz
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div
+            class="card text-center mb-3"
+            id="questions"
+            style="width: 100%;"
+          >
+            <div
+              class="card-header"
+              style=" background-color: rgb(207, 248, 25);"
+            >
+              <p id="questionTimer">Timer:</p>
+              <p id="triviaQuestion">Question:</p>
+            </div>
+            <ul class="list-group list-group-flush answerSection">
+              <li
+                class="list-group-item list-group-item-success answer"
+                id="answer1"
+              >
+                Cras justo odio
+              </li>
+              <li
+                class="list-group-item list-group-item-success answer"
+                id="answer2"
+              >
+                Dapibus ac facilisis in
+              </li>
+              <li
+                class="list-group-item list-group-item-success answer"
+                id="answer3"
+              >
+                Vestibulum at eros
+              </li>
+              <li
+                class="list-group-item list-group-item-success answer"
+                id="answer4"
+              >
+                Cras justo odio
+              </li>
+              <li
+                class="list-group-item list-group-item-success answer"
+                id="answer5"
+              >
+                Vestibulum at eros
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-sm-6 text-center">
+          <div id="afterClick" style="text-align: center;">
+            <p id="confirm">Y/N</p>
+            <img id="gif" />
+          </div>
+
+          <div id="results" style="text-align: center; margin-bottom: 20px;">
+            <p id="resultsCorrect">Correct answers: 0</p>
+            <p id="resultsIncorrect">Incorrect answers: 0</p>
+            <p id="noAnswer">Not answered: 0</p>
+            <button
+              type="button"
+              class="btn btn-primary btn-sm"
+              onclick="resetQuiz();"
+            >
+              Start over?
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/javascript/app.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
